@@ -1,0 +1,33 @@
+<div class="login_bar">
+    <div class="viewport">
+        <nav class="login_nav">
+        {% if auth.user.authenticated %}
+            {% if auth.user.getAttribute("img") %}
+                <img class="profile" src="{{auth.user.getAttribute("img")}}">
+            {% endif %}
+
+            {% if auth.user.displayname %}
+                <strong>{{ auth.user.displayname|e }}</strong>
+                ({{ auth.user.id }})
+            {% else %}
+                <strong>{{ auth.user.id|e }}</strong>
+            {% endif %}
+            
+            {% if auth.user.authenticator=='localAuth' and auth.plugin.getModule("localAuth").config.accountEdit.enabled %}
+                | <a href="{{ "account"|link }}">My account</a>
+            {% endif %}
+            
+            | <form method="POST" action="{{ "logout"|link }}" class="inline">
+                {{ csrf_field("logout") }}
+                <input type="submit" value="Logout" name="logout" class="link">
+            </form>
+        {% else %}
+            <a href="{{ "login"|link }}">Login</a>
+            
+            {% if auth.plugin.getModule("localAuth").config.registration.enabled %}
+                | <a href="{{ "register"|link }}">Register</a>
+            {% endif %}
+        {% endif %}
+        </nav>
+    </div>
+</div>

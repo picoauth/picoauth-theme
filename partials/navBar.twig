@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="viewport">
+        <ul>
+            {% for page in pages if page.title and not page.hidden %}
+                {% if not (page.id starts with "locked")  %}
+                    {% set pageDepth = page.id|split('/')|length %}
+                    {% if (pageDepth == 2) and (page.id ends with "/index") or (pageDepth == 1) %}
+                        <li>
+                            <a href="{{ page.url }}">
+                                {{ page.title|e }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

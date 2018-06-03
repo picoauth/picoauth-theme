@@ -1,0 +1,8 @@
+{% if auth.vars.locks is defined and auth.vars.locks is not empty %}
+<div class="viewport">
+<form method="POST" action="{{ current_page.url }}" class="underNav">
+    {{ csrf_field() }}
+    <button class="link" type="submit" name="logout-locks">Close locks session</button>
+</form>
+</div>
+{% endif %}
