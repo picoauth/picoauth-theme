@@ -1,0 +1,13 @@
+{
+    "name": "picoauth/picoauth-theme",
+    "type": "pico-theme",
+    "description": "PicoAuth's default theme.",
+    "keywords": [ "picoauth", "picocms-theme", "pico-theme" ],
+    "license": "MIT",
+    "require": {
+        "picoauth/picoauth": "dev-master"
+    },
+    "extra": {
+        "installer-name": "picoauth-theme"
+    }
+}
