@@ -9,6 +9,7 @@ Feel free to use this theme as a template for your own customized theme for a Pi
 * Adds a login bar to the top of each page with an option to log in, register (if enabled).
 * For a logged user it displays a username, an option to logout and link to the page to change password (if enabled).
 * Can also display a small profile picture next to the username (if configured in PicoAuth).
+* Displays an option to *Close locks session* (if PageLock module is configured and at least 1 lock has been unlocked)
 * This theme is responsive.
 * Structure of the forms (login, registration, etc.) is kept default.
 
@@ -30,4 +31,4 @@ The key part of this theme is `index.twig` which applies the default layout from
 
 ### Customization
 
-Refer to the *Theme customization* section of the PicoAuth documentation for the full reference on how to create/customize themes when using PicoAuth.
+Refer to the *Theme customization* section of the [PicoAuth Documentation](https://github.com/picoauth/picoauth/wiki) for the full reference on how to create/customize themes when using PicoAuth.
