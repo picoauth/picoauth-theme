@@ -3,9 +3,17 @@
     "type": "pico-theme",
     "description": "PicoAuth's default theme.",
     "keywords": [ "picoauth", "picocms-theme", "pico-theme" ],
+    "homepage": "https://github.com/picoauth/picoauth-theme",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Tuma",
+            "email": "pavel.tuma@yahoo.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "picoauth/picoauth": "dev-master"
+        "picoauth/picoauth": "^1.0"
     },
     "extra": {
         "installer-name": "picoauth-theme"
